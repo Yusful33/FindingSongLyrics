@@ -20,7 +20,7 @@ lyrics_page = rq.get(lyrics_url)
 soup_2 = bs(lyrics_page.text, "lxml")
 
 # Find the lyrics
-lyrics = soup_2.find("div", {"class": "col-xs-12 col-lg-8 text-center"}).find_all("div")[6].get_text()
+lyrics = soup_2.find("div", {"class": "col-xs-12 col-lg-8 text-center"}).find_all("div")[5].get_text()
 
 # Make a list with every line of the lyrics as a element and remove the first 2 because are html notes
 lines = lyrics.splitlines()[2:]
